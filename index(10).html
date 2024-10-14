@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> الحب</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            direction: rtl;
+            text-align: right;
+            background-color: #ffe6e6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #ff69b4;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .gallery a {
+            margin: 10px;
+            border-radius: 10px;
+            overflow: hidden;
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .gallery a:hover {
+            transform: scale(1.1);
+        }
+
+        .poetry-section {
+            background-color: #fff0f5;
+            padding: 20px;
+            text-align: center;
+            font-size: 1.2em;
+            color: #ff69b4;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            width: 100%;
+            color: white;
+            text-align: center;
+            font-size: 1em;
+            position: relative;
+            bottom: 0;
+        }
+
+        .button {
+            background-color: #ff69b4;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 16px;
+        }
+
+        .upload-section {
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1> الحب ❤️</h1>
+    </header>
+
+    <div class="gallery">
+        <a href="https://www.google.com/search?q=love+image1"><img src="https://via.placeholder.com/200?text=Love+1" alt="صورة حب 1"></a>
+        <a href="https://www.google.com/search?q=love+image2"><img src="https://via.placeholder.com/200?text=Love+2" alt="صورة حب 2"></a>
+        <a href="https://www.google.com/search?q=love+image3"><img src="https://via.placeholder.com/200?text=Love+3" alt="صورة حب 3"></a>
+        <a href="https://www.google.com/search?q=love+image4"><img src="https://via.placeholder.com/200?text=Love+4" alt="صورة حب 4"></a>
+        <a href="https://www.google.com/search?q=love+image5"><img src="https://via.placeholder.com/200?text=Love+5" alt="صورة حب 5"></a>
+    </div>
+
+    <div class="upload-section">
+        <h2>اختر صورة لعرضها في المعرض</h2>
+        <input type="file" id="fileInput" accept="image/*">
+    </div>
+
+    <div class="poetry-section">
+        <h2>شعر الحب ❤️</h2>
+        <p>يا حبيبي فيك كل الجمال،</p>
+        <p>وفي عيونك أرى كل الآمال،</p>
+        <p>أنت النور في حياتي،</p>
+        <p>وأنت الحب في قلبي.</p>
+    </div>
+
+    <footer>
+        <p>I love you, Dndn ❤️</p>
+    </footer>
+
+    <script>
+        document.getElementById('fileInput').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('image1').src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+</body>
+</html>
